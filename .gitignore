@@ -1,0 +1,10 @@
+elm-stuff/
+node_modules/
+build*/
+bundle/avro.js
+bundle/elm-app.js
+bower_components/
+.DS_Store
+tests/elm-stuff/
+npm-debug.log
+avro.js

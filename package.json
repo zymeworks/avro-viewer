@@ -1,0 +1,34 @@
+{
+  "name": "avro-viewer",
+  "version": "1.0.0",
+  "author": "Andrew Guthrie <andrew.guthrie@zymeworks.com>",
+  "description": "Decode and browse avro and json files",
+  "license": "MIT",
+  "main": "''",
+  "dependencies": {
+    "file-saver": "1.3.3",
+    "avsc": "5.1.2",
+    "font-awesome": "4.7.0",
+    "tachyons": "4.10.0"
+  },
+  "scripts": {
+    "setup": "npm install && npm run elm-install && npm run build-decoder && npm run build",
+    "elm-install": "elm-package install",
+    "build-decoder": "browserify bundle/export.js > bundle/avro.js",
+    "build": "npm run build-elm && gulp build",
+    "build-elm": "elm-make src.elm/Main.elm --output bundle/elm-app.js",
+    "test": "elm test",
+    "serve": "static-server ./build -o"
+  },
+  "devDependencies": {
+    "browserify": "15.2.0",
+    "elm": "0.18.0",
+    "elm-test": "0.18.6",
+    "event-stream": "3.3.4",
+    "gulp": "3.9.1",
+    "gulp-less": "3.3.0",
+    "gulp-rename": "1.4.0",
+    "gulp-rimraf": "0.2.2",
+    "static-server": "2.2.1"
+  }
+}

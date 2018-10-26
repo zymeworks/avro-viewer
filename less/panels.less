@@ -1,0 +1,146 @@
+.panel-breadcrumbs {
+  display: flex;
+  padding: 10px 25px;
+  background: #f5f5f5;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  .breadcrumb-header {
+    margin-right: 20px;
+    font-weight: 500;
+  }
+}
+
+.breadcrumb-list {
+  span {
+    color: #222;
+    margin-right: 1em;
+
+    &::after {
+      content: "/";
+      margin-left: 15px;
+      color: #aaa;
+      display: inline-block;
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+
+  &.small-breadcrumbs {
+    span {
+      margin-right: 0.55em;
+
+      &::after {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.panel-content {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  justify-content: left;
+  padding: 20px;
+  padding-bottom: 50px;  //Temp hack, should be height 100% later
+
+  .panel-wrapper {
+    min-height: min-content;
+    display: flex;
+
+    .panel {
+      min-width: 300px;
+      margin-right: 30px;
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 14px 0 #ddd;
+      background: #f7f8f8;
+      border-radius: 2px;
+      // Temporary
+      max-height: 575px;
+      overflow-y: auto;
+      // /Temporary
+
+      .panel-header {
+        display: flex;
+        background: #fff;
+        color: #000;
+        font-size: 0.8em;
+        font-weight: 500;
+        padding: 5px 15px;
+        border-bottom: 1px solid #aaa;
+
+        .panel-csv-btn {
+          margin-left: auto;
+          font-size: 12px;
+          color: #383838;
+          padding: 0 4px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+        // i {
+        //  float: right;
+        //   padding-top: 7px;
+        //   color: #777;
+        //   cursor: pointer;
+        //   &:hover{
+        //     color: #323232;
+        //   }
+        // }
+      }
+
+      .panel-body {
+        font-family: 'Anonymous Pro', monospace;
+        color: #000;
+        font-size: 0.9em;
+      }
+
+      .entry {
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        border-left: 3px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+          background: #e3f0fa;
+        }
+
+        &.static {
+          cursor: default;
+
+          &:hover {
+            background: none;
+          }
+        }
+
+        &.active {
+          background: #fff;
+          border: 1px solid #eef2f5;
+          border-left: 3px solid #45a9ff;
+        }
+
+        .panel-file-icon {
+          margin-right: 1rem;
+          font-size: 0.75em;
+          color: #252525;
+        }
+
+        .expand-panel-icon {
+          float: right;
+          color: #6f6f6f;
+          padding-top: 9px;
+          transform: scale(0.8);
+        }
+      }
+
+      .data-table {
+        border-top: none;
+        min-width: 650px;
+      }
+    }
+  }
+}

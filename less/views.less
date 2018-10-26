@@ -1,0 +1,140 @@
+@import (reference) "node_modules/font-awesome/less/variables.less";
+@import (reference) "node_modules/font-awesome/less/mixins.less";
+
+
+
+
+/*
+    Util
+    =====
+*/
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+/*
+  Extend tachyons
+  ===============
+*/
+.pb6i {
+  padding-bottom: 32em !important;
+}
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #222;
+  background-color: #efefef;
+}
+/*
+  UI elements
+  ===========
+*/
+hr {
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 10px 0 15px 0;
+}
+.bg-blue {
+  background-color: #3f9ff1;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  transition: 0.3s ease all;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+/*
+  Layouts
+  =======
+*/
+.group-panel {
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 5px 8px 0 #dedede;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+.group-title {
+  font-size: 19px;
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  color: #383838;
+  border-bottom: 1px solid #eee;
+}
+/*
+  Data Table
+  ==========
+*/
+table.data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #ddd;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+table.data-table th,
+table.data-table td {
+  padding: 0.45em 0.7em;
+  border-left: 1px solid #f1f1f1;
+  line-height: inherit;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 160px;
+}
+table.data-table th.filled,
+table.data-table td.filled {
+  color: #fff;
+  border-left: none;
+  font-weight: 800;
+}
+table.data-table td {
+  vertical-align: top;
+}
+table.data-table th {
+  vertical-align: bottom;
+}
+table.data-table thead th {
+  position: relative;
+  text-align: left;
+  font-weight: 600;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+  color: #313131;
+  font-size: 12px;
+  padding: 0.5em 0.7em;
+}
+table.data-table tbody th {
+  text-align: left;
+}
+table.data-table tbody tr {
+  background: #fefefe;
+  color: #171717;
+  font-size: 12px;
+}
+table.data-table tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+table.data-table tbody tr:hover {
+  background-color: #f9fbde;
+}
