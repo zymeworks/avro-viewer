@@ -7,7 +7,7 @@ Avro Viewer is an Avro/json file explorer built with Elm. It works exclusively w
 These files can be explored as tables, trees, or panels and exported as JSON or CSV. The viewer supports drag and drop decoding of multiple files at once, including JSON files.
 
 ## Demo:
-Since all of the decoding work happens in the browser, there is an [online static demo here](https://pages.github.io)!
+Since all of the decoding work happens in the browser, there is an [online static demo here](https://zymeworks.github.io/avro-viewer/)!
 
 ## Running Locally Quick start:
 
