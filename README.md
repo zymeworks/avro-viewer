@@ -31,7 +31,7 @@ npm run build
 ```
 
 Avro Viewer must be served by a web server to allow javascript service workers to load their source. 
-For development, use Node's `http-server`:
+For development, use Node's `static-server`:
 
 ```
 npm run serve
