@@ -147,9 +147,6 @@
         try {
             var valid = JSON.parse(jsonString);
             count = (valid && valid.length) || 1;
-            if (!(valid && typeof valid === "object")) {
-                throw "invalid JSON"
-            }
         }
         catch (e) {
             // 'resolving' failed file parsing since Promises.all is all or nothing
